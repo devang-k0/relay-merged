@@ -1,0 +1,187 @@
+/* popup.css — brutalist, Re/ay style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+
+body {
+  width: 300px;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.container {
+  padding: 16px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 180px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 8px;
+}
+
+.brand {
+  font-family: "Arial Black", Impact, sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.brand .slash {
+  color: #ff0000;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  padding: 3px 8px;
+}
+.status-pill .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #ff0000;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.divider {
+  height: 2px;
+  background: #ff0000;
+  width: 100%;
+}
+
+.status-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 8px 12px;
+  text-align: center;
+}
+.status-message-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.status-message-sub {
+  font-size: 11px;
+  color: #aaaaaa;
+}
+
+#mainState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.platform-row {
+  width: 100%;
+  text-align: center;
+}
+.platform-name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  border: 1px solid #333333;
+  padding: 4px 12px;
+  display: inline-block;
+}
+
+.record-button {
+  width: 100%;
+  background: #000000;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.record-button:hover:not(:disabled) {
+  background: #ff0000;
+  color: #000000;
+}
+.record-button:disabled {
+  border-color: #666666;
+  color: #666666;
+  cursor: not-allowed;
+}
+.record-button.recording {
+  border-color: #ff0000;
+  background: #000000;
+  color: #ff0000;
+}
+.record-button.recording:hover:not(:disabled) {
+  background: #ff0000;
+  color: #000000;
+}
+.record-icon {
+  display: none;
+}
+.record-label {
+  display: inline-block;
+}
+
+.timer {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border-top: 1px solid #333333;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.error-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  padding: 8px 10px;
+  background: rgba(255,0,0,0.05);
+}
+.error-area svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.hidden {
+  display: none !important;
+}

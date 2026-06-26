@@ -1,0 +1,24 @@
+# Relay STT — Local Speech-to-Text — Python dependencies
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# NOTE on torch: the line below installs the standard CPU/GPU-auto-detect
+# build from PyPI. If you have an NVIDIA GPU and want CUDA acceleration,
+# it's usually better to install torch FIRST using the command generator
+# at https://pytorch.org/get-started/locally/ (choose your CUDA version),
+# and THEN run `pip install -r requirements.txt` — pip will see torch is
+# already satisfied and skip reinstalling the CPU-only build.
+
+flask>=3.0.0
+werkzeug>=3.0.0
+
+# openai-whisper: the LOCAL/offline Whisper package (not the OpenAI API client)
+openai-whisper>=20231117
+
+# torch: required by whisper for running the neural network locally
+torch>=2.0.0
+
+# numpy is a transitive dependency of whisper/torch but pinning it avoids
+# occasional version-mismatch issues
+numpy>=1.24.0

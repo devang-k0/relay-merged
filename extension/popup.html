@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Re/ay</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Re<span class="slash">/</span>ay</div>
+      <div id="statusPill" class="status-pill hidden">
+        <span class="dot"></span>
+        <span>REC</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- "Not a meeting" state with the original SVG icon -->
+    <div id="notMeetingState" class="status-message hidden">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 9V13M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#aaaaaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="status-message-title">Not a meeting tab</div>
+      <div class="status-message-sub">Open a supported meeting to start recording</div>
+    </div>
+
+    <div id="mainState" class="hidden">
+      <div class="platform-row">
+        <span id="platformName" class="platform-name">—</span>
+      </div>
+
+      <button id="recordButton" class="record-button" type="button">
+        <span class="record-label">Start Recording</span>
+      </button>
+
+      <div id="timer" class="timer hidden">00:00</div>
+    </div>
+
+    <div id="errorArea" class="error-area hidden">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18A2 2 0 003.54 21H20.46A2 2 0 0022.18 18L13.71 3.86A2 2 0 0010.29 3.86Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="errorText"></span>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

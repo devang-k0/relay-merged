@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--
+  offscreen.html
+
+  This invisible document is where the real audio work happens.
+  Service workers can't call getUserMedia or hold long-lived media
+  streams, so Manifest V3 extensions that need real audio/video
+  processing use an offscreen document for it instead.
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Relay offscreen worker</title>
+  </head>
+  <body>
+    <script src="offscreen.js"></script>
+  </body>
+</html>

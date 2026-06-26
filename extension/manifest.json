@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Relay",
+  "version": "1.0.0",
+  "description": "Record full meeting audio (remote + mic) with a clear on-screen recording indicator for everyone on the call.",
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "storage",
+    "offscreen",
+    "scripting",
+    "downloads",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "https://meet.google.com/*",
+    "https://zoom.us/*",
+    "https://*.zoom.us/*",
+    "https://teams.microsoft.com/*",
+    "https://*.teams.microsoft.com/*",
+    "https://webex.com/*",
+    "https://*.webex.com/*",
+    "https://gotomeeting.com/*",
+    "https://*.gotomeeting.com/*",
+    "https://bluejeans.com/*",
+    "https://*.bluejeans.com/*",
+    "https://whereby.com/*",
+    "https://*.whereby.com/*",
+    "https://discord.com/*",
+    "https://app.slack.com/*",
+    "https://*.slack.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

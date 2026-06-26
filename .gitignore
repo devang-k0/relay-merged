@@ -1,0 +1,17 @@
+# Python cache and virtual environments
+__pycache__/
+venv/
+env/
+*.pyc
+
+# Your server's temporary audio and transcript folders
+uploads/
+outputs/
+
+# VS Code / IDE junk
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
