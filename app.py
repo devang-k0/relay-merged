@@ -62,6 +62,16 @@ from flask import (
 from werkzeug.utils import secure_filename
 
 import whisper  # openai-whisper (local), NOT the OpenAI API
+# ----- BULLETPROOF FFMPEG FIX -----
+try:
+    import imageio_ffmpeg
+    ffmpeg_path = imageio_ffmpeg.get_ffmpeg_exe()
+    ffmpeg_dir = os.path.dirname(ffmpeg_path)
+    os.environ["PATH"] = ffmpeg_dir + os.pathsep + os.environ["PATH"]
+    print(f"[startup] FFmpeg successfully located at: {ffmpeg_path}")
+except ImportError:
+    print("[startup] imageio-ffmpeg not installed. Install it with: pip install imageio-ffmpeg")
+# ------------------------------------
 
 
 
